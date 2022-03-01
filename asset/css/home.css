@@ -1,0 +1,166 @@
+/* Todo heading */
+
+#todo-heading{
+	color: gray;
+	font-size: 45px;
+	text-align: center;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+
+/* TODO list tag*/
+.todo-list{
+	background-color: lightskyblue;
+	width: 60%;
+	height: auto;
+	margin: auto;
+	border-radius: 5px;
+	border: 1px solid blueviolet;
+	
+}
+
+/* TODO Ul list item*/
+.todo-list ul{
+	list-style: none;
+}
+
+.todo-list ul li{
+	border-bottom: 1px solid gray;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.todo-list ul .todo-item{
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
+}
+
+/* TODO form tag */
+#todo-form{
+	margin: auto;
+	text-align: center;
+	width: 60%;
+}
+
+/* form input-box name  */
+#contact-form-name{
+	width: 92%;
+	display: block;
+	padding: 30px;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: none;
+	outline: none;
+	border-right: none;
+	font-size: 20px;
+	color: gray;
+	position: relative;
+}
+
+#contact-form-name:hover{
+	background-color: #ddd;
+}
+
+/* input name label */
+.name-label{
+	font-size: 18px;
+	color: gray;
+	position: absolute;
+	top: 18%;
+	left: 23%;
+	z-index: 1;
+
+}
+
+/* TODO select option tag */
+#todo-option{
+	display: flex;
+	width: 100%;
+}
+
+
+#select-category{
+	padding: 25px;
+	color: gray;
+	width: 50%;
+	font-size: 20px;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid gray;
+	border-left: none;
+	outline: none;
+	border-right: 1px solid gray;
+	position: relative;
+}
+
+#select-category:hover{
+	background-color: #ddd;
+}
+
+/* TODO form date input tag */
+#todo-date{
+	padding: 25px;
+	color: gray;
+	width: 50%;
+	font-size: 20px;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid gray;
+	border-left: none;
+	outline: none;
+	border-right: none;
+	position: relative;
+}
+
+#todo-date:hover{
+	background-color: #ddd;
+}
+
+/* Select option tag label */
+.option-label{
+	font-size: 20px;
+	color: gray;
+	position: absolute;
+	top: 30%;
+	left: 23%;
+	z-index: 1;
+}
+
+/* TODO date label */
+.todo-date-label{
+	font-size: 20px;
+	color: gray;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	z-index: 1;
+}
+
+
+/* List add button */
+#button-1 .btn-1{
+	padding: 18px;
+	background-color: black;
+	outline: none;
+	color: gray;
+	border: none;
+	margin: 10px;
+	font-size: 20px;
+}
+
+/* List Delete Button */
+.btn-2{
+	padding: 10px;
+	background-color: red;
+	outline: none;
+	color: #ddd;
+	border: none;
+	margin: 50px 10px 0px 10px;
+	font-size: 15px;
+}
+
+/* Delete Anchor tag */
+.delete-todo a{
+	font-size: 30px;
+	align-items: left;
+}

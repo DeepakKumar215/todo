@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> <%= title %> </title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+<body>
+	<h1 id="todo-heading"> TODO App </h1>
+
+	<!-- TODO form tag -->
+	<form action="/todo-list" method="POST" id="todo-form">
+
+		<!-- Input name -->
+		<label for="contact-form-name" class="name-label">DESCRIPTION </label>
+		<input type="text" name="description" placeholder="What do you need to do?" required id="contact-form-name">
+
+		<!-- Select option tag (Category) -->
+
+		<div id="todo-option">
+
+		<label for="select-category" class="option-label">Category </label>	
+		<select name="category" id="select-category">
+			<option data-hidden="true">
+        		Choose a category
+    		</option>
+			
+			<option>Personal</option>
+			<option>Work</option>
+			<option>School</option>
+			<option>Cleaning</option>
+			<option>Saving</option>
+		</select>
+
+		<!-- Due Date input date tag -->
+		<label for="todo-date" class="todo-date-label">Due Date </label>
+		<input type="date" name="date" placeholder="Enter due date" id="todo-date" required>
+
+		</div>
+
+		<!-- List Add Button -->
+		<div id="button-1">
+			<button type="submit" class="btn-1"><i class="far fa-plus"></i> Add Tasks</button>
+
+		</div>
+	</form>
+
+	<!--TODO List Tag -->
+	<div class="todo-list" >
+		<ul>
+				<% for(let i of todo_list) { %>
+				<li>
+					<!-- List Item -->
+					<div class="todo-item" >
+						<div>
+			  			<p>	<%= i.description %> </p>
+			 	 		<p> <%= i.category %> </p>
+			 	 		<p> <%= i.date %> </p>
+			 	 		</div>
+
+					<a href="/delete-todo-list/?id=<%= i.id %>">
+			 	 			<!-- Delete Button  -->
+			 	 	<button type="submit" class="btn-2"><i class="far fa-trash-alt"></i> Delete Tasks</button>
+			 	 	</a>
+			 		</div>
+			 		
+			 		</li>
+
+				<% } %>
+		</ul>
+	</div>
+
+</body>
+</html>
